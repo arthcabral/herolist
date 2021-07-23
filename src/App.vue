@@ -1,32 +1,24 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <!--  INÍCIO NAVBAR-->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <div class="container">
+        <a class="navbar-brand order-md-last">Hero List</a>
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <router-link class="nav-link" to="/">
+            Register New Hero
+            </router-link>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" to="/list-hero">List All Heroes</router-link>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- FIM NAVBAR-->
+    <div class="container mt-5">
+      <router-view></router-view>
     </div>
-    <router-view/>
   </div>
 </template>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
