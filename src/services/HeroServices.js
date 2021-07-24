@@ -46,5 +46,31 @@ export default {
         } catch (error) {
             console.log(error);
         }
-    }
+    },
+
+    /**
+     * Método responsável por atualizar um determinado 'Hero' por um Id
+     * (PUT): localhost:3000/api/heroes/:id
+     */
+     async updateHero(id) {
+        try {
+            const response = await Api().put(`/heroes/${id}`);
+            return response.data;
+        } catch (error) {
+            console.log(error);
+        }
+    },
+
+    /**
+     * Método responsável por excluir um determinado 'Hero' por um Id
+     * (DELETE): localhost:3000/api/heroes/:id
+     */
+     async deleteHero(id) {
+        try {
+            const response = await Api().delete(`/heroes/${id}`);
+            return response.data;
+        } catch (error) {
+            console.log(error);
+        }
+    },
 }
